@@ -1,0 +1,526 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Acme', sans-serif;
+    overflow-x: hidden;
+    background-color: #eee;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.chatting{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    background-color: #2C566A;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+    z-index: 200000;
+}
+.nav-link{
+    color: #fff;    
+}
+.navbar .image{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50px;
+    position: relative;
+}
+.navbar .image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+.height-100{
+    height: 100%;
+}
+.parts{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sidepanel{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-y: scroll;
+}
+.sidepanel .profile {
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s height ease;
+}
+.sidepanel .profile .image{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+    border: 2px solid #2ecc71;
+    float: left;
+}
+.sidepanel .profile .image img{
+    width: 100%;
+    height: 100%;
+}
+.sidepanel .profile p{
+    float: left;
+    margin-left: 15px;
+    color: #333;
+}
+#sidepanel #search{
+    position: relative;
+}
+#sidepanel #search label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #333;
+}
+#sidepanel #search .form-control {
+    padding: 10px 0 10px 25px;
+    border: none;
+    color: #333;
+    background-color: #eee;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+#sidepanel #search input:focus {
+    outline: none;
+    background: #ddd;
+}
+#sidepanel #contacts{
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#sidepanel #contacts li{
+    list-style: none;
+}
+#sidepanel #contacts .contact {
+    width: 100%;
+    cursor: pointer;
+    transition: all 1s;
+}
+#sidepanel #contacts .contact:hover {
+    background: #ddd; /*Hover customer active*/
+}
+#sidepanel #contacts .active {
+    background: #2C566A; /*active chat with customer */
+}
+/* wrap customers images */
+#sidepanel #contacts .contact .image-status{
+    position: relative;
+    float: left;
+    margin-right: 15px;
+}
+#sidepanel #contacts .contact .image{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+    overflow: hidden;
+}
+#sidepanel #contacts .contact .image img {
+    width: 100%;
+    height: 100%;
+}
+#sidepanel #contacts .contact .image-status .contact-status {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #D7D5D5!important;/* circle of border */
+    background: #95a5a6!important;
+    z-index: 50
+    }
+/*statues colors*/
+#sidepanel #contacts .contact .image-status .online {
+    background: #2ecc71;
+}
+
+#sidepanel #contacts .contact .busy {
+    background: #e74c3c;
+}
+#sidepanel #contacts .contact .contact-info{
+    margin-left: 50px;
+    color: #333;
+}
+/*customer name*/
+#sidepanel #contacts .contact .name {
+    font-weight: 500;
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/*customer last message*/
+#sidepanel #contacts .contact .preview {
+    overflow: hidden;
+    transition: 1s all ease;
+}
+#sidepanel #contacts .contact .preview .you {
+    opacity: .5;
+}
+
+.active-chatting{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;    
+    background-image: url(../images/chatting/background.jpg);
+    background-size: cover;
+}
+.partener .image{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
+.partener{
+    width: 100%;
+    background-color: #2C566A;
+}
+.contact-profile{
+    position: relative;
+    margin: 0;
+}
+.partener .image img{
+    width: 100%;
+    height: 100%;
+}
+.partener .image-status{
+    position: relative;
+}
+.partener .image-status .busy {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #D7D5D5!important;
+    background-color: #e74c3c;
+    z-index: 50;
+}
+.partener .image-status .busy{
+    background-color:  #e74c3c
+}
+.partener .contact-info{
+    margin-left: 10px;
+}
+.partener p{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+.partener span{
+    padding: 0;
+    margin: 0;
+    color: #eee;
+    font-size: 14px;
+}
+.buttons .incomplete{
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.7s;
+}
+.buttons .finish-request{
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.7s;
+}
+.active-chatting .message-input{
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #eee;
+}
+.form-control,.input-group-text{
+    border-radius: 100px;
+}
+.form-control:focus{
+     outline: none;
+}
+.input-group-text{
+    cursor: pointer;
+}
+.send{
+    background-color: #007bff;
+    border: none;
+    height: 100%;
+    margin: 0;
+}
+.active-chatting .message-input{
+    text-align: center;
+    background-color: #eee;
+    width: 100%;
+}
+.form-control,.input-group-text{
+    border-radius: 100px;
+}
+.input-group-text{
+    cursor: pointer;
+}
+.send{
+    height: 100%;
+    margin: 0;
+}
+.mess{
+    height: 100%;
+    width: 100%;
+}
+.messages-cus{
+    max-width: 100%;
+    width: 99%;
+    height: 90%;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    overflow-y: scroll;
+}
+.messages-des{
+    max-width: 100%;
+    width: 99%;
+    height: 92%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow-y: scroll;
+}
+.messages .image{
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 100%;
+}
+.messages .image img{
+    width: 100%;
+    height: 100%;
+}
+.messages .message{
+    display: inline-block;
+    clear: both;
+    margin: 15px 15px 5px 15px;
+    width: calc(100% - 25px);
+    font-size: 0.9em;
+}
+.messages .message:nth-last-child(1) {
+    margin-bottom: 20px;
+}
+.messages .message.sent .image img {
+    float: right;
+}
+.messages .message.sent p {
+    background: #007bff;; /*customer message bar color*/
+    color: #fff; /*customer message text color*/
+}
+.messages .message.replies p {
+    background: #06263d; /*designer messages bar color*/
+    color: #fff;
+    float: right;
+}
+.messages .message.replies .image {
+    float: right;
+}
+.messages .message p {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 205px;
+    line-height: 130%;
+}
+@media screen and (min-width: 735px) {
+.messages .message p {
+    max-width: 300px;
+  }
+}
+.part3{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+.partener-info{
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.partener-info .image-status .image{
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.partener-info .image-status .image img{
+    width: 100%;
+    height: 100%;
+}
+.partener-info .image-status{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.partener-info .image-status .busy {
+    position: absolute;
+    left: 30%;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid #D7D5D5!important;
+    background-color: #e74c3c;
+    z-index: 70
+}
+.partener-info .image-status .busy{
+    background-color:  #e74c3c
+}
+.partener-info .info .name{
+    font-weight: 900;
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+.partener-info .info .country{
+    color: #888;
+} 
+.partener-info .info .description{
+    font-size: 14px;
+    color: #333;
+}
+.partener-info .accounts .account{
+    border-radius: 100%;
+    background-color: #09c;
+}
+.partener-info .accounts .facebook{
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #4267B2;
+}
+.partener-info .accounts .twitter{
+    background-color: #1DA1F2;
+}
+.partener-info .accounts .instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.info{
+    position: relative;
+}
+.info::before{
+    position: absolute;
+    content: "";
+    background: linear-gradient(70deg,#0ebeff,#ffdd40,#ae63e4,#47cf73);
+    width: 90%;
+    height: 2px;
+    top: 110%;
+    left: 5%;
+}
+.more-info{
+    position: relative;
+}
+.more-info p{
+    color: #777;
+}
+.more-info::before{
+    position: absolute;
+    content: "";
+    background: linear-gradient(70deg,#0ebeff,#ffdd40,#ae63e4,#47cf73);
+    width: 90%;
+    height: 2px;
+    top: 110%;
+    left: 5%;
+}
+.media{
+    position: relative;
+    text-align: left;
+}
+.media p,.media span{
+    color: #777;
+}
+.media .row{
+    padding: 0;
+    margin: 0;
+}
+.media .row .col-md-4{
+    padding: 0;
+    margin: 0;
+}
+.media .image{
+    height: 100px;
+    width: 100%;
+    margin-right: 5px;
+    overflow: hidden;
+}
+.media .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.file{
+    display: block;
+    max-width: 200px;
+}
+.file img{
+    max-width: 100%;
+}

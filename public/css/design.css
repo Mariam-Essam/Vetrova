@@ -1,0 +1,194 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Acme', sans-serif;
+    overflow-x: hidden;
+    background-color: #eee;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.design-page{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    background-color: #2C566A;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+    z-index: 200000;
+}
+.nav-link{
+    color: #fff;    
+}
+.navbar .image{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50px;
+    position: relative;
+}
+.navbar .image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+.special-design-image{
+    width: 100%;
+}
+.special-design-image .image{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px #333 solid;
+    overflow: hidden;
+}
+.special-design-image .image .big-image{
+    width: 100%;
+    height: 100%;
+}
+.height-100{
+    height: 99%;
+}
+.height-99 {
+    height: 95%;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.choices .request-type p,.women-types p, .men-types p, .kids-types p{
+    font-size: 25px;
+}
+.choice{
+    cursor: pointer;
+}
+.choice label{
+    font-size: 22px;
+    width: 120px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.choice label:hover{
+    transform: scale(1.008);
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 1);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 1);
+    border-radius: 3px;
+}
+.btn-info{
+    font-size: 17px;
+}
+.women-types .choice label, .men-types .choice label, .kids-types .choice label{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.request-type{
+    height: 94%;
+}
+.women-shirts, .women-tshirts, .women-trousers, .women-skirts, .women-skirts-shirts, .women-skirts-t-shirts, .women-trousers-shirts, .women-trousers-tshirts, .women-dress, .women-suit, .women-hoddy, .women-jacket{
+    display: none;
+}
+.cloth-type, .category-type{
+	display:none;
+}
+.types-photos .image{
+    height: 130px;
+    overflow: hidden;
+}
+.types-photos .image .small-image{
+    width: 100%;
+    height: 100%;
+}
+.modal{
+    z-index: 100000000;
+}
+.modal-content #close{
+    position: absolute;
+    z-index: 30;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+}
+.designer-choices{
+    background-color: #ddd;
+}
+.designer-choices .image{
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
+.designer-choices .image img{
+    height: 100%;
+    width: 100%;
+}
+.designer-choices .designer-name{
+    display: inline-block;
+}
+.designer-choices .designer-name p{
+    font-size: 19px;
+    color: #333;
+}
+.des{
+    height: 100%;
+    width: 100%;
+}
+.butn .btn{
+    font-size: 20px;    
+}
+
+
+
+.scroll{
+    overflow-y: scroll;
+    padding-bottom: 40px;
+}
+
+
+
+
+
+
